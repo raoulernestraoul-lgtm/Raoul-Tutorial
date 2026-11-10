@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apprendre l’anglais – Tutoriel pour débutants</title>
+<style>
+  :root{
+    --paper:#f3f6fa; --card:#ffffff; --ink:#14233b; --muted:#5b6b82;
+    --line:#cfd8e6; --mark:#ffe27a; --red:#c8372d; --green:#1f7a4d;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--paper:#0f1826; --card:#17243a; --ink:#eaf0fa; --muted:#9fb0c8; --line:#2a3b57; --mark:#6b5a12; --red:#ff7d72; --green:#5fd39a;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Trebuchet MS",Verdana,sans-serif}
+  header{padding:48px 20px 24px;max-width:760px;margin:0 auto}
+  h1{font:700 clamp(2rem,6vw,3.2rem)/1.1 Georgia,"Times New Roman",serif;margin:0 0 12px}
+  h1 span{background:linear-gradient(transparent 55%,var(--mark) 55%)}
+  header p{color:var(--muted);margin:0;max-width:52ch}
+  nav{max-width:760px;margin:0 auto;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap}
+  nav button{font:inherit;padding:8px 16px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;cursor:pointer}
+  nav button[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+  button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+  main{max-width:760px;margin:0 auto;padding:20px}
+  section{display:none;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+  section.on{display:block}
+  h2{font:700 1.6rem Georgia,serif;margin:0 0 8px}
+  h3{margin:24px 0 8px;font-size:1.05rem}
+  .en{font-weight:700;color:var(--red)}
+  table{border-collapse:collapse;width:100%;margin:8px 0}
+  td,th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+  .scroll{overflow-x:auto}
+  .tip{border-left:4px solid var(--mark);background:var(--paper);padding:10px 14px;margin:16px 0;border-radius:0 8px 8px 0}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+  .flip{font:inherit;min-height:84px;padding:10px;border:2px dashed var(--line);background:var(--paper);color:var(--ink);border-radius:10px;cursor:pointer;font-size:1.05rem}
+  .flip.fr{border-style:solid;border-color:var(--green);color:var(--green)}
+  .opts{display:grid;gap:8px;margin:12px 0}
+  .opts button{font:inherit;text-align:left;padding:10px 14px;border:2px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);cursor:pointer}
+  .opts button.ok{border-color:var(--green);background:color-mix(in srgb,var(--green) 18%,transparent)}
+  .opts button.ko{border-color:var(--red);background:color-mix(in srgb,var(--red) 15%,transparent)}
+  .next{font:inherit;padding:10px 20px;border:0;border-radius:8px;background:var(--ink);color:var(--paper);cursor:pointer}
+  #msg{min-height:1.6em;font-weight:700}
+  footer{text-align:center;color:var(--muted);padding:24px;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Apprendre l’<span>anglais</span></h1>
+  <p>Un tutoriel pour débutants : quatre leçons courtes, des mots à retenir et un quiz pour vérifier ce que vous avez appris.</p>
+</header>
+
+<nav role="tablist" aria-label="Leçons">
+  <button role="tab" aria-selected="true" data-t="l1">1. Salutations</button>
+  <button role="tab" aria-selected="false" data-t="l2">2. Le verbe « to be »</button>
+  <button role="tab" aria-selected="false" data-t="l3">3. Les nombres</button>
+  <button role="tab" aria-selected="false" data-t="l4">4. Quiz</button>
+</nav>
+
+<main>
+<section id="l1" class="on">
+  <h2>Les salutations</h2>
+  <p>Pour commencer une conversation, voici les expressions les plus utiles.</p>
+  <div class="scroll"><table>
+    <tr><th>Anglais</th><th>Français</th></tr>
+    <tr><td class="en">Hello / Hi</td><td>Bonjour / Salut</td></tr>
+    <tr><td class="en">Good morning</td><td>Bonjour (le matin)</td></tr>
+    <tr><td class="en">Good afternoon</td><td>Bonjour (l’après-midi)</td></tr>
+    <tr><td class="en">Good evening</td><td>Bonsoir</td></tr>
+    <tr><td class="en">Good night</td><td>Bonne nuit</td></tr>
+    <tr><td class="en">How are you?</td><td>Comment allez-vous ? / Ça va ?</td></tr>
+    <tr><td class="en">I’m fine, thank you.</td><td>Je vais bien, merci.</td></tr>
+    <tr><td class="en">Nice to meet you.</td><td>Enchanté(e).</td></tr>
+    <tr><td class="en">Goodbye / See you</td><td>Au revoir / À bientôt</td></tr>
+  </table></div>
+  <div class="tip"><b>À savoir :</b> « Good night » se dit seulement quand on se sépare pour dormir. Pour dire bonsoir en arrivant, on utilise « Good evening ».</div>
+  <h3>Mini-dialogue</h3>
+  <p><b>Anna :</b> Hello! My name is Anna. What’s your name?<br>
+     <b>Paul :</b> Hi Anna, I’m Paul. Nice to meet you.<br>
+     <b>Anna :</b> Nice to meet you too. How are you?<br>
+     <b>Paul :</b> I’m fine, thank you. And you?</p>
+  <h3>Cartes de mots (cliquez pour traduire)</h3>
+  <div class="cards" id="cards1"></div>
+</section>
+
+<section id="l2">
+  <h2>Le verbe « to be » (être)</h2>
+  <p>C’est le verbe le plus important en anglais. Il sert à se présenter, décrire et dire où l’on est.</p>
+  <div class="scroll"><table>
+    <tr><th>Pronom</th><th>Forme</th><th>Forme courte</th></tr>
+    <tr><td>I</td><td class="en">am</td><td>I’m</td></tr>
+    <tr><td>You</td><td class="en">are</td><td>you’re</td></tr>
+    <tr><td>He / She / It</td><td class="en">is</td><td>he’s / she’s / it’s</td></tr>
+    <tr><td>We</td><td class="en">are</td><td>we’re</td></tr>
+    <tr><td>They</td><td class="en">are</td><td>they’re   </td></tr>
+  </table></div>
+  <h3>Négation et question</h3>
+  <p>Négation : on ajoute <span class="en">not</span> → <i>She is not (isn’t) a teacher.</i><br>
+     Question : on inverse le verbe et le sujet → <i>Are you a student?</i></p>
+  <h3>Exemples</h3>
+  <p><i>I am a student.</i> – Je suis étudiant.<br>
+     <i>He is from Nigeria.</i> – Il vient du Nigeria.<br>
+     <i>We are happy.</i> – Nous sommes heureux.<br>
+     <i>Is it far?</i> – Est-ce loin ?</p>
+  <div class="tip"><b>Attention :</b> en anglais, on dit « I am 20 » pour donner son âge (littéralement « je suis 20 »), jamais « I have 20 ».</div>
+</section>
+
+<section id="l3">
+  <h2>Les nombres de 1 à 20, puis les dizaines</h2>
+  <div class="scroll"><table>
+    <tr><td>1 <b class="en">one</b></td><td>6 <b class="en">six</b></td><td>11 <b class="en">eleven</b></td><td>16 <b class="en">sixteen</b></td></tr>
+    <tr><td>2 <b class="en">two</b></td><td>7 <b class="en">seven</b></td><td>12 <b class="en">twelve</b></td><td>17 <b class="en">seventeen</b></td></tr>
+    <tr><td>3 <b class="en">three</b></td><td>8 <b class="en">eight</b></td><td>13 <b class="en">thirteen</b></td><td>18 <b class="en">eighteen</b></td></tr>
+    <tr><td>4 <b class="en">four</b></td><td>9 <b class="en">nine</b></td><td>14 <b class="en">fourteen</b></td><td>19 <b class="en">nineteen</b></td></tr>
+    <tr><td>5 <b class="en">five</b></td><td>10 <b class="en">ten</b></td><td>15 <b class="en">fifteen</b></td><td>20 <b class="en">twenty</b></td></tr>
+  </table></div>
+  <p>Dizaines : <span class="en">thirty</span> (30), <span class="en">forty</span> (40), <span class="en">fifty</span> (50), <span class="en">sixty</span> (60), <span class="en">seventy</span> (70), <span class="en">eighty</span> (80), <span class="en">ninety</span> (90), <span class="en">one hundred</span> (100).</p>
+  <div class="tip">Pour 21, 22, 23… on relie avec un trait d’union : <i>twenty-one, twenty-two, thirty-five</i>.</div>
+  <h3>Cartes de nombres (cliquez pour voir la réponse)</h3>
+  <div class="cards" id="cards2"></div>
+</section>
+
+<section id="l4">
+  <h2>Quiz</h2>
+  <p id="qcount" style="color:var(--muted)"></p>
+  <p id="qtext" style="font-weight:700;font-size:1.15rem"></p>
+  <div class="opts" id="qopts"></div>
+  <p id="msg" aria-live="polite"></p>
+  <button class="next" id="qnext" hidden>Question suivante</button>
+</section>
+</main>
+
+<footer>Bon courage et… keep practising!</footer>
+
+<script>
+// Navigation par onglets
+const tabs=document.querySelectorAll('nav button');
+tabs.forEach(b=>b.addEventListener('click',()=>{
+  tabs.forEach(t=>t.setAttribute('aria-selected',t===b));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.t));
+}));
+
+// Cartes à retourner
+function makeCards(id,list){
+  const box=document.getElementById(id);
+  list.forEach(([en,fr])=>{
+    const c=document.createElement('button');
+    c.className='flip';c.textContent=en;
+    let shown=false;
+    c.addEventListener('click',()=>{
+      shown=!shown;
+      c.textContent=shown?fr:en;
+      c.classList.toggle('fr',shown);
+    });
+    box.appendChild(c);
+  });
+}
+makeCards('cards1',[["Hello","Bonjour"],["Thank you","Merci"],["Please","S’il vous plaît"],["Sorry","Désolé"],["Goodbye","Au revoir"],["Yes / No","Oui / Non"]]);
+makeCards('cards2',[["seven","7"],["thirteen","13"],["forty","40"],["sixteen","16"],["ninety","90"],["twenty-five","25"]]);
+
+// Quiz
+const quiz=[
+  {q:"Comment dit-on « Bonsoir » ?",o:["Good morning","Good evening","Good night"],a:1},
+  {q:"Complétez : She ___ a teacher.",o:["am","are","is"],a:2},
+  {q:"Comment dit-on « 15 » ?",o:["fifty","fifteen","five"],a:1},
+  {q:"Que répond-on à « How are you? »",o:["I’m fine, thank you.","Nice to meet you.","Goodbye."],a:0},
+  {q:"Complétez : We ___ happy.",o:["is","am","are"],a:2},
+  {q:"Comment dit-on « 30 » ?",o:["thirteen","thirty","three"],a:1}
+];
+let i=0,score=0;
+const qc=document.getElementById('qcount'),qt=document.getElementById('qtext'),
+      qo=document.getElementById('qopts'),msg=document.getElementById('msg'),qn=document.getElementById('qnext');
+function show(){
+  msg.textContent='';qn.hidden=true;qo.innerHTML='';
+  if(i>=quiz.length){
+    qc.textContent='Terminé';
+    qt.textContent='Votre score : '+score+' / '+quiz.length;
+    msg.textContent=score>=5?'Excellent travail !':score>=3?'Bien joué, relisez les leçons pour progresser.':'Relisez les leçons, puis réessayez.';
+    qn.textContent='Recommencer';qn.hidden=false;
+    return;
+  }
+  qc.textContent='Question '+(i+1)+' sur '+quiz.length;
+  qt.textContent=quiz[i].q;
+  quiz[i].o.forEach((txt,k)=>{
+    const b=document.createElement('button');
+    b.textContent=txt;
+    b.addEventListener('click',()=>answer(k));
+    qo.appendChild(b);
+  });
+  qn.textContent='Question suivante';
+}
+function answer(k){
+  const right=quiz[i].a,btns=qo.querySelectorAll('button');
+  btns.forEach((b,n)=>{b.disabled=true;if(n===right)b.classList.add('ok');});
+  if(k===right){score++;msg.textContent='Correct !';}
+  else{btns[k].classList.add('ko');msg.textContent='Pas tout à fait. La bonne réponse est : '+quiz[i].o[right];}
+  qn.hidden=false;
+}
+qn.addEventListener('click',()=>{
+  if(i>=quiz.length){i=0;score=0;}else{i++;}
+  show();
+});
+show();
+</script>
+</body>
+</html>
